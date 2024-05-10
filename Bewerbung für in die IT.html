@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startseite</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('1234.jpg') no-repeat center center fixed; /* Hintergrundbild auf den Body-Element anwenden */
+            background-size: cover; /* Bildgröße anpassen, um den gesamten Bildschirm zu bedecken */
+            background-attachment: scroll;
+        }
+
+        /* CSS für die Navigationsleiste */
+        nav {
+            background: linear-gradient(to right, hsla(280, 2%, 31%, 0.527), #f06d16c2); /* Farbverlauf von Grau zu Orange */
+            border: 0px solid transparent; /* Transparenter Rahmen um die Navigation */
+            border-radius: 0px; /* Abgerundete Ecken für den Rahmen */
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            position: relative;
+            width: 100%; /* Breite der Navigation auf 100% des Bildschirms setzen */
+            z-index: 999; /* Z-Index, um sicherzustellen, dass die Navigation über dem Inhalt liegt */
+        }
+        nav a {
+            color: rgba(22, 21, 21, 0.822);
+            font-weight: bold; /* Fette Schrift */
+            text-decoration: none;
+            text-transform: uppercase; /* Text in Großbuchstaben umwandeln */
+            flex-grow: 1;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            transition: color 0.3s; /* Übergangseffekt für die Schriftfarbe */
+        }
+        nav a:hover {
+            color: #000000; /* Hellere goldene Schriftfarbe beim Hover */
+        }
+        nav a:not(:first-child)::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0); /* Halbtransparenter weißer Hintergrund */
+            z-index: -1;
+            opacity: 0; /* Anfangszustand: Unsichtbar */
+            transition: opacity 0.3s; /* Übergangseffekt */
+        }
+        nav a:hover::before {
+            opacity: 1; /* Weißer Hintergrund erscheint beim Hover */
+        }
+
+        /* Container für den Inhalt der Seite */
+        .content {
+            margin-top: 0px; /* Abstand zum oberen Rand für die Navigationsleiste */
+            padding: 20px;
+            min-height: calc(100vh - 120px); /* Mindesthöhe des Inhalts, um sicherzustellen, dass der gesamte Inhalt sichtbar ist (abzüglich der Höhe der Navigationsleiste und Fußzeile) */
+            text-align: center; /* Zentrieren des Textes */
+        }
+        .content h1 {
+            color: #f06d1698; /* Weiße Farbe für die Überschrift */
+            margin-top: 320px; /* Abstand von oben */
+            margin-left: -55%;
+            font-size: 90px; /* Schriftgröße */
+            font-family: 'Future Z', Future Z; /* Schriftart */
+            /* Positionierung entfernt */
+        }
+        
+        /* CSS für die Fußzeile */
+        footer {
+            background: linear-gradient(to right, hsla(280, 2%, 31%, 0.527), #f06d16c2); /* Farbverlauf von Grau zu Orange */
+            padding: 20px;
+            text-align: left;
+            position: relative; /* Position der Fußzeile auf relative ändern */
+            width: 100%; /* Breite der Fußzeile auf 100% des Bildschirms setzen */
+            z-index: 998; /* Z-Index, um sicherzustellen, dass die Fußzeile unter der Navigation liegt */
+        }
+        footer p {
+            color: #f06d16c0; /* Farbe angepasst */
+            font-weight: bold; /* Fette Schrift */
+            text-decoration: none;
+            text-transform: none; /* Text in Großbuchstaben umwandeln */
+            padding: 0px;
+            /* Positionierung entfernt */
+            transition: color 0.3s; /* Übergangseffekt für die Schriftfarbe */
+            margin: 2px 0; /* Abstand zwischen den Textfeldern */
+        }
+        
+        footer p:not(:first-child)::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0); /* Halbtransparenter weißer Hintergrund */
+            z-index: -1;
+            opacity: 0; /* Anfangszustand: Unsichtbar */
+            transition: opacity 0.3s; /* Übergangseffekt */
+        }
+        footer p:hover::before {
+            opacity: 1; /* Weißer Hintergrund erscheint beim Hover */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigationsleiste -->
+    <nav>
+        <a href="#">Startseite</a>
+        <a href="#">Werdegang</a>
+        <a href="#">Referenzen</a>
+        <a href="#">Skills</a>
+    </nav>
+
+    <!-- Container für den Inhalt der Seite -->
+    <div class="content">
+        <!-- Hier kann der Inhalt der Startseite stehen -->
+        <h1>Bewerbung</h1>
+    </div>
+
+    <!-- Fußzeile -->
+    <footer>
+        <p>Remo Walliser</p>
+        <p>Bahnhofstrasse 14</p>
+        <p>4571 Lüterkofen</p>
+        <p>079 969 73 49</p>
+        <p>remo.walliser@bluewin.ch</p>
+    </footer>
+</body>
+</html>
+
+
+
